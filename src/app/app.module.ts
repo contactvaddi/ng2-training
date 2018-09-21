@@ -21,7 +21,15 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { CartService } from './cart.service';
 import {CurrencySwitcherComponent} from './currency-switcher/currency-switcher.component';
 import {EnumUtilsModule} from '../../projects/enum-utils/src/lib/enum-utils.module';
-//import { ReactiveFormsModule } from '@angular/forms';
+import { NavigationComponent } from './navigation/navigation.component';
+import { JumbotronComponent } from './jumbotron/jumbotron.component';
+import {HighlightDirective} from '../../solutions/lab8/highlight.directive';
+import { CurrencyRendererPipe } from './currency-renderer.pipe';
+import { StoreViewComponent } from './store-view/store-view.component';
+import {CheckoutFormComponent} from './checkout-form/checkout-form.component';
+import {CheckoutViewComponent} from './checkout-view/checkout-view.component';
+import {CartViewComponent} from './cart-view/cart-view.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,15 +39,18 @@ import {EnumUtilsModule} from '../../projects/enum-utils/src/lib/enum-utils.modu
     LoginComponent,
     PopupWindowComponent, LoaderComponent, HeaderComponent,
     LoaderViewChildComponent,
-    CarouselComponent, CurrencySwitcherComponent
+    CarouselComponent, CurrencySwitcherComponent, NavigationComponent, JumbotronComponent,
+    HighlightDirective,
+    CurrencyRendererPipe,
+    StoreViewComponent, CheckoutFormComponent, CheckoutViewComponent, CartViewComponent
   ],
   imports: [
     BrowserModule,
     EnumUtilsModule,
     FormsModule,
     HttpClientModule,
-    RouterModule , routing
-    //,ReactiveFormsModule
+    RouterModule , routing,
+    ReactiveFormsModule
   ],
   providers: [AuthGuard, LoginService, CartService],
   bootstrap: [AppComponent]

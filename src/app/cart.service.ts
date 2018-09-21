@@ -12,8 +12,8 @@ export class CartService {
     return this.http.get<LicensePlate[]>('http://localhost:8000/cart');
   }
 
-  addToCart(plate: LicensePlate) {
-    // TODO
+  addToCart(plate: LicensePlate): Observable<any> {
+    return this.http.put<any>('http://localhost:8000/cart/' + plate._id, null);
   }
 
   removeFromCart(plate: LicensePlate) {
